@@ -1,37 +1,27 @@
 <?php
-/**
- * Functions which enhance the theme by hooking into WordPress
- *
- * @package law
- */
-
-/**
- * Adds custom classes to the array of body classes.
- *
- * @param array $classes Classes for the body element.
- * @return array
- */
-function law_body_classes( $classes ) {
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
-
-	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
-	}
-
-	return $classes;
+// Setup theme setting page
+if (function_exists('acf_add_options_page')) {
+	$name_option = 'Theme Setting';
+	acf_add_options_page(
+		array(
+			'page_title' => $name_option,
+			'menu_title' => $name_option,
+			'menu_slug' => 'theme-general-settings',
+			'capability' => 'edit_posts',
+			'redirect' => false
+		)
+	);
 }
-add_filter( 'body_class', 'law_body_classes' );
 
-/**
- * Add a pingback url auto-discovery header for single posts, pages, or attachments.
- */
-function law_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
-	}
+function dd($data)
+{
+	echo '<div style="background-color: #c0c0c0; border: 1px solid #ddd; color: #333; padding: 20px; margin: 20px;">';
+	echo '<div style="font-size: 20px; font-weight: bold; color: #007bff; margin-bottom: 10px;">Debug Data</div>';
+	echo '<div style="font-family: monospace;">';
+	echo '<pre>';
+	var_dump($data);
+	echo '</pre>';
+	echo '</div>';
+	echo '</div>';
+	die();
 }
-add_action( 'wp_head', 'law_pingback_header' );

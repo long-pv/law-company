@@ -139,40 +139,24 @@ add_action( 'widgets_init', 'law_widgets_init' );
  */
 function law_scripts() {
 	wp_enqueue_style( 'law-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'law-style', 'rtl', 'replace' );
+	// add select2
+	wp_enqueue_style('law-style-select2', get_template_directory_uri() . '/assets/inc/select2/select2.css', array(), _S_VERSION);
+	wp_enqueue_script('law-script-select2', get_template_directory_uri() . '/assets/inc/select2/select2.js', array(), _S_VERSION, true);
 
-	wp_enqueue_script( 'law-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// add wow
+	wp_enqueue_style('law-style-wow', get_template_directory_uri() . '/assets/inc/wow/wow.css', array(), _S_VERSION);
+	wp_enqueue_script('law-script-wow', get_template_directory_uri() . '/assets/inc/wow/wow.js', array(), _S_VERSION, true);
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	//add custom main css/js
+	wp_enqueue_style('law-style-main', get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION);
+	wp_enqueue_script('law-script-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true);
 }
 add_action( 'wp_enqueue_scripts', 'law_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
 
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
+// Security
+require get_template_directory() . '/inc/security.php';
