@@ -148,6 +148,7 @@ function law_scripts() {
 	wp_enqueue_script('law-script-wow', get_template_directory_uri() . '/assets/inc/wow/wow.js', array(), _S_VERSION, true);
 
 	//add custom main css/js
+	wp_enqueue_style('law-style-core', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION);
 	wp_enqueue_style('law-style-main', get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION);
 	wp_enqueue_script('law-script-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true);
 }
