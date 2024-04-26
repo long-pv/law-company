@@ -1,0 +1,163 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333333;
+    font-size: 16px;
+
+    @include media-breakpoint-down(md) {
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    }
+}
+
+//------ Typography
+h6,
+.h6 {
+    font-size: 16px;
+}
+
+h5,
+.h5 {
+    font-size: 16px;
+}
+
+h4,
+.h4 {
+    font-size: 18px;
+}
+
+h3,
+.h3 {
+    font-size: 20px;
+}
+
+h2,
+.h2 {
+    font-size: 24px;
+}
+
+h1,
+.h1 {
+    font-size: 40px;
+}
+
+@include media-breakpoint-up(lg) {
+
+    h6,
+    .h6 {
+        font-size: 18px;
+    }
+
+    h5,
+    .h5 {
+        font-size: 20px;
+    }
+
+    h4,
+    .h4 {
+        font-size: 24px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 32px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 40px;
+    }
+
+    h1,
+    .h1 {
+        font-size: 48px;
+    }
+}
+
+.pointer-events {
+    pointer-events: none !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.secSpace {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &--top {
+        padding-top: 48px;
+        padding-bottom: 0px;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 50px;
+            padding-bottom: 0px;
+        }
+    }
+
+    &--bottom {
+        padding-top: 0px;
+        padding-bottom: 48px;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 0px;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+// -------------- Picture frame -------------
+.imgGroup {
+    display: block;
+    z-index: 5;
+    position: relative;
+    height: 0px;
+    padding-bottom: 70%;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%) scale(1);
+        object-fit: cover;
+        transition: all 0.3s;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &:hover {
+            img {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+    }
+}
+
+// ---------- line ------------
+@mixin line-clamp($lines) {
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.line-1 {
+    @include line-clamp(1);
+}
+
+.line-2 {
+    @include line-clamp(2);
+}
