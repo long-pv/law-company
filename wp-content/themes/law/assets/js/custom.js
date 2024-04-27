@@ -3,11 +3,11 @@
 	'use strict'
 
 
-	AOS.init({
-		duration: 800,
-		easing: 'slide',
-		once: true
-	});
+	// AOS.init({
+	// 	duration: 800,
+	// 	easing: 'slide',
+	// 	once: true
+	// });
 
 	var preloader = function() {
 
@@ -30,7 +30,7 @@
 			fadeOut(overlay);
 		}, 200);
 	};
-	preloader();
+	// preloader();
 
 	var tinyslider = function() {
 
@@ -135,9 +135,9 @@
 	}
 	tinyslider();
 
-	var lightboxVideo = GLightbox({
-		selector: '.glightbox'
-	});
+	// var lightboxVideo = GLightbox({
+	// 	selector: '.glightbox'
+	// });
 
 
 })()
