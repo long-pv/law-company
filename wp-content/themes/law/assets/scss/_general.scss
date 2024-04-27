@@ -1,0 +1,66 @@
+.pointer-events {
+    pointer-events: none !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+// -------------- Picture frame -------------
+.imgGroup {
+    display: block;
+    z-index: 5;
+    position: relative;
+    height: 0px;
+    padding-bottom: 70%;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%) scale(1);
+        object-fit: cover;
+        transition: all 0.3s;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &:hover {
+            img {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+    }
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+
+    iframe,
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+.features {
+    &__itemTitle {
+        font-size: 64px;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    &__itemDesc {
+        margin-bottom: 0px;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 20px;
+    }
+}

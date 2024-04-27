@@ -1,0 +1,18 @@
+/**
+ * Global reset
+ */
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
+@import 'bootstrap/bootstrap';
+//animated
+@import 'animate';
+
+// slick
+@import 'slick/slick';
+
+//template css
+@import 'general';
+@import 'contents/editor';
+@import 'contents/header';
+@import 'contents/footer';

@@ -1,0 +1,29 @@
+// Bootstrap overrides
+
+//grid breakpoints
+$grid-breakpoints : (xs : 0,
+  sm : 480px,
+  md : 768px,
+  lg : 992px,
+  xl : 1200px,
+  xxl : 1440px);
+
+$container-max-widths: (
+  sm : 440px,
+  md : 720px,
+  lg : 960px,
+  xl : 1200px,
+  xxl : 1200px
+);
+
+//base color
+$body: #ffffff;
+$primary : #1623AF; //1
+$secondary : #32312f; //2
+$success : #134A84; //3
+$info : #21BDCA; //4
+$warning : #343A40; //5
+$danger : #F1F1F2; //6
+$light : #F0F0F0;
+$dark : #464646;
+$muted : #C4C4C4;

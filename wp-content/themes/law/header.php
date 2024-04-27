@@ -28,65 +28,36 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 
-
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close">
-				<span class="icofont-close js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div>
-
-	<nav class="site-nav">
+	<header id="header" class="header">
 		<div class="container">
-			<div class="menu-bg-wrap">
-				<div class="site-navigation">
-					<div class="row g-0 align-items-center">
-						<div class="col-2">
-							<a href="index.html" class="logo m-0 float-start">Financing<span
-									class="text-primary">.</span></a>
-						</div>
-						<div class="col-8 text-center ">
-							<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li class="has-children">
-									<a href="financing.html">Pages</a>
-									<ul class="dropdown">
-										<li><a href="financing.html">Financing</a></li>
-										<li><a href="single.html">Blog Single</a></li>
-										<li><a href="#">Case Study Detail</a></li>
-										<li><a href="#">Menu One</a></li>
-										<li><a href="#">Menu Two</a></li>
-										<li class="has-children">
-											<a href="#">Dropdown</a>
-											<ul class="dropdown">
-												<li><a href="#">Sub Menu One</a></li>
-												<li><a href="#">Sub Menu Two</a></li>
-												<li><a href="#">Sub Menu Three</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-							</ul>
-						</div>
-						<div class="col-2 text-end">
-							<a href="#"
-								class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
-								<span></span>
-							</a>
+			<div class="header__navInner">
+				<div class="header__logo">
+					<?php $logo_url = get_template_directory_uri() . '/assets/images/logo.png'; ?>
+					<img src="<?php echo $logo_url; ?>" alt="logo">
+				</div>
 
-							<a href="#" class="call-us d-flex align-items-center">
-								<span class="icon-phone"></span>
-								<span>123-489-9381</span>
-							</a>
-						</div>
-					</div>
+				<div class="header__nav header__menupc">
+					<?php
+					// if (has_nav_menu('menu-1')) {
+					// 	wp_nav_menu(
+					// 		array(
+					// 			'theme_location' => 'menu-1',
+					// 			'container' => 'nav',
+					// 			'container_class' => '',
+					// 			'depth' => 1,
+					// 		)
+					// 	);
+					// }
+					?>
+
+					<ul class="menu">
+						<li><a href="#">Trang chủ</a></li>
+						<li><a href="#">Về chúng tôi</a></li>
+						<li><a href="#">Chính sách</a></li>
+						<li><a href="#">Dịch vụ</a></li>
+						<li><a href="#">Tin tức</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
-	</nav>
+	</header>
