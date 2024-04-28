@@ -11,83 +11,48 @@
 
 ?>
 
-<footer class="site-footer">
+<footer class="bg-light py-5">
 	<div class="container">
 		<div class="row">
+			<div class="col-12">
+				<h3>
+					VĂN PHÒNG LUẬT SƯ SỐ VII
+				</h3>
+			</div>
 			<div class="col-lg-4">
-				<div class="widget">
-					<h3>About</h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-						live the blind texts.</p>
-				</div> <!-- /.widget -->
-				<div class="widget">
-					<address>43 Raymouth Rd. Baltemoer, <br> London 3910</address>
-					<ul class="list-unstyled links">
-						<li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-						<li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-						<li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
-					</ul>
-				</div> <!-- /.widget -->
+				<div class="header__logo">
+					<?php $logo_url = get_template_directory_uri() . '/assets/images/logo.png'; ?>
+					<img src="<?php echo $logo_url; ?>" alt="logo">
+				</div>
 			</div> <!-- /.col-lg-4 -->
 			<div class="col-lg-4">
-				<div class="widget">
-					<h3>Company</h3>
-					<ul class="list-unstyled float-start links">
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Vision</a></li>
-						<li><a href="#">Mission</a></li>
-						<li><a href="#">Terms</a></li>
-						<li><a href="#">Privacy</a></li>
-					</ul>
-					<ul class="list-unstyled float-start links">
-						<li><a href="#">Partners</a></li>
-						<li><a href="#">Business</a></li>
-						<li><a href="#">Careers</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Creative</a></li>
-					</ul>
-				</div> <!-- /.widget -->
+				<div class="editor">
+					<p>
+						Địa chỉ: 165 Giảng Võ, Cát Linh, Đống Đa, Hà Nội
+					</p>
+					<p>
+						SĐT: 096 622 7979
+					</p>
+					<p>
+						Hotline: 096 622 7979
+					</p>
+					<p>
+						Email: vanphongluatsuso7hn@gmail.com
+					</p>
+					<p>
+						Website: www.vanphongluatsuso7.vn
+					</p>
+				</div>
 			</div> <!-- /.col-lg-4 -->
 			<div class="col-lg-4">
-				<div class="widget">
-					<h3>Navigation</h3>
-					<ul class="list-unstyled links mb-4">
-						<li><a href="#">Our Vision</a></li>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Contact us</a></li>
-					</ul>
-
-					<h3>Social</h3>
-					<ul class="list-unstyled social">
-						<li><a href="#"><span class="icon-instagram"></span></a></li>
-						<li><a href="#"><span class="icon-twitter"></span></a></li>
-						<li><a href="#"><span class="icon-facebook"></span></a></li>
-						<li><a href="#"><span class="icon-linkedin"></span></a></li>
-						<li><a href="#"><span class="icon-pinterest"></span></a></li>
-						<li><a href="#"><span class="icon-dribbble"></span></a></li>
-					</ul>
-				</div> <!-- /.widget -->
+				<div class="video">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.444665788569!2d105.7799171749155!3d21.014886630631004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab554eba8445%3A0xcf9a816d7e57b044!2zTeG7hSBUcsOsIEjhuqEsIE3hu4UgVHLDrCwgVOG7qyBMacOqbSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1714264548322!5m2!1svi!2s"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
 			</div> <!-- /.col-lg-4 -->
 		</div> <!-- /.row -->
-
-		<div class="row mt-5">
-			<div class="col-12 text-center">
-				<!-- 
-			  **==========
-			  NOTE: 
-			  Please don't remove this copyright link unless you buy the license here https://Long/license/  
-			  **==========
-			-->
-
-				<p>Copyright &copy;
-					<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed
-					with love by <a href="https://Long">Long</a> Distributed By <a href="https://#">Long</a>
-					<!-- License information: https://Long/license/ -->
-				</p>
-			</div>
-		</div>
 	</div> <!-- /.container -->
 </footer> <!-- /.site-footer -->
 
