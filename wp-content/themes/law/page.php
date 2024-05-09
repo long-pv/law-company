@@ -14,25 +14,18 @@
 
 get_header();
 ?>
+<div class="container py-5">
+	<div class="row justify-content-center">
+		<div class="col-lg-10">
+			<div class="editor">
+				<h1 class="mb-4 text-primary">
+					<?php the_title(); ?>
+				</h1>
 
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
+				<?php the_content(); ?>
+			</div>
+		</div>
+	</div>
+</div>
 <?php
-get_sidebar();
 get_footer();
