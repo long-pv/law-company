@@ -22,15 +22,10 @@
 
     a {
         text-decoration: none;
-        transition: all 0.5s;
+        transition: all 0.3s;
         white-space: inherit;
-        color: #ffffff !important;
-
-        @include media-breakpoint-up(lg) {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+        color: #848d92 !important;
+        text-decoration: underline !important;
     }
 
     ul {
@@ -72,7 +67,7 @@
 
     th,
     td {
-        border: 1px solid #ffffff;
+        border: 1px solid #848d92;
         vertical-align: top;
     }
 
