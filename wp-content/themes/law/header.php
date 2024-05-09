@@ -38,25 +38,17 @@
 
 				<div class="header__nav header__menupc">
 					<?php
-					// if (has_nav_menu('menu-1')) {
-					// 	wp_nav_menu(
-					// 		array(
-					// 			'theme_location' => 'menu-1',
-					// 			'container' => 'nav',
-					// 			'container_class' => '',
-					// 			'depth' => 1,
-					// 		)
-					// 	);
-					// }
+					if (has_nav_menu('menu-1')) {
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'container' => 'nav',
+								'container_class' => '',
+								'depth' => 1,
+							)
+						);
+					}
 					?>
-
-					<ul class="menu">
-						<li><a href="#">Trang chủ</a></li>
-						<li><a href="#">Về chúng tôi</a></li>
-						<li><a href="#">Chính sách</a></li>
-						<li><a href="#">Dịch vụ</a></li>
-						<li><a href="#">Tin tức</a></li>
-					</ul>
 				</div>
 			</div>
 		</div>

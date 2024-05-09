@@ -25,3 +25,46 @@ function dd($data)
 	echo '</div>';
 	die();
 }
+
+add_action('admin_footer', 'custom_required_featured_image');
+function custom_required_featured_image()
+{
+	global $post_type;
+
+	$post_type_arr = [
+		'post',
+	];
+
+	if (in_array($post_type, $post_type_arr)) {
+		?>
+		<script>
+			jQuery(document).ready(function ($) {
+				$('label[for="postimagediv-hide"]').remove();
+
+				$('#post').submit(function () {
+					// Check for featured images
+					if ($('#set-post-thumbnail img').length == 0) {
+						// image input area
+						let postimagediv = $('#postimagediv');
+
+						// Scroll to the image import area
+						$('html, body').animate({
+							scrollTop: postimagediv.offset().top - 100
+						}, 500);
+
+						// show notification
+						alert('Please enter Featured image.');
+
+						return false;
+					}
+				});
+
+				// If an image is selected, remove the 'error' class
+				$('#set-post-thumbnail').on('click', function () {
+					$('#postimagediv').removeClass('error');
+				});
+			});
+		</script>
+		<?php
+	}
+}

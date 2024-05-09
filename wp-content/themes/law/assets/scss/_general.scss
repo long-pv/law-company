@@ -51,6 +51,14 @@
 }
 
 .features {
+    &__item {
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            text-align: start;
+        }
+    }
+
     &__itemTitle {
         font-size: 64px;
         color: #ffffff;
