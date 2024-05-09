@@ -28,7 +28,7 @@ $current_term_name = $current_term->name;
 				the_post();
 				if (get_the_title()):
 					?>
-					<div class="col-lg-4 mb-3 mb-lg-0">
+					<div class="col-lg-4 mb-3">
 						<div class="card post-entry h-100">
 							<a href="<?php the_permalink(); ?>">
 								<img src="<?php echo get_the_post_thumbnail_url(); ?>" class="card-img-top"
