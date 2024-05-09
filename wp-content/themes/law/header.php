@@ -31,10 +31,10 @@
 	<header id="header" class="header">
 		<div class="container">
 			<div class="header__navInner">
-				<div class="header__logo">
+				<a href="<?php echo home_url(); ?>" class="header__logo">
 					<?php $logo_url = get_template_directory_uri() . '/assets/images/logo.png'; ?>
 					<img src="<?php echo $logo_url; ?>" alt="logo">
-				</div>
+				</a>
 
 				<div class="header__nav header__menupc">
 					<?php
