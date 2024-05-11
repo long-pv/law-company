@@ -53,10 +53,6 @@
 .features {
     &__item {
         text-align: center;
-
-        @include media-breakpoint-up(lg) {
-            text-align: start;
-        }
     }
 
     &__itemTitle {
@@ -80,18 +76,6 @@
 // modal dialog
 .modal {
     z-index: 9999999999;
-
-    .editor {
-        color: #333333 !important;
-
-        * {
-            color: #333333 !important;
-        }
-
-        a {
-            text-decoration: underline !important;
-        }
-    }
 }
 
 .modal-dialog {
@@ -106,7 +90,22 @@
 
     .modal-body {
         @include media-breakpoint-up(lg) {
-            padding: 24px;
+            margin-right: 2px;
+
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px #F0E1C0;
+                background-color: #F0E1C0;
+            }
+
+            &::-webkit-scrollbar {
+                width: 4px;
+                background-color: rgba(78, 46, 18, 0.5);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(78, 46, 18, 0.5);
+                border: 2px solid rgba(78, 46, 18, 0.5);
+            }
         }
     }
 

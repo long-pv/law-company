@@ -7,8 +7,17 @@
         input:-webkit-autofill,
         input:-webkit-autofill:hover,
         input:-webkit-autofill:focus {
-            -webkit-text-fill-color: #ffffff;
-            -webkit-box-shadow: 0 0 0px 40rem #32469F inset;
+            -webkit-text-fill-color: #333333;
+            -webkit-box-shadow: 0 0 0px 40rem #ffffff inset;
+        }
+
+        .wpcf7-spinner {
+            display: block;
+            margin: 12px auto;
+        }
+
+        p {
+            margin-bottom: 0px;
         }
     }
 

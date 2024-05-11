@@ -18,7 +18,7 @@ get_header();
 	<div class="row justify-content-center">
 		<div class="col-lg-10">
 			<div class="editor">
-				<h1 class="mb-4 text-primary">
+				<h1 class="mb-4 text-primary text-center">
 					<?php the_title(); ?>
 				</h1>
 

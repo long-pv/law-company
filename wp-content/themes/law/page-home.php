@@ -117,16 +117,30 @@ if ($about_us_title && $about_us_image):
 $features = get_field('features');
 
 if ($features):
+
+	$count = 0;
+	foreach ($features as $item) {
+		if ($item['title'] && $item['description']) {
+			$count++;
+		}
+	}
+
+	if ($count > 3) {
+		$class = 'col-lg-3';
+	} else {
+		$class = 'col-lg-4';
+	}
+
 	?>
 	<!-- features -->
 	<div class="section sec-features features">
 		<div class="container">
-			<div class="row">
+			<div class="row justify-content-center">
 				<?php
 				foreach ($features as $item):
 					if ($item['title'] && $item['description']):
 						?>
-						<div class="col-lg-3 mb-3 mb-lg-0">
+						<div class="<?php echo $class; ?> mb-3 mb-lg-0">
 							<div class="features__item">
 								<h3 class="features__itemTitle">
 									<?php echo $item['title']; ?>
@@ -170,12 +184,25 @@ if ($services_title && $services_list):
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row justify-content-center">
 				<?php
+				$count = 0;
+				foreach ($services_list as $item) {
+					if ($item['title'] && $item['icon']) {
+						$count++;
+					}
+				}
+
+				if ($count > 3) {
+					$class = 'col-lg-3';
+				} else {
+					$class = 'col-lg-4';
+				}
+
 				foreach ($services_list as $item):
 					if ($item['icon'] && $item['title']):
 						?>
-						<div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0" data-aos="fade-up">
+						<div class="col-12 col-md-6 <?php echo $class; ?> mb-3" data-aos="fade-up">
 							<div class="service text-center h-100 mb-0">
 								<span class="bi-cash-coin">
 									<img src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" width="50"
