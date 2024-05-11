@@ -10,7 +10,7 @@
  */
 
 ?>
-
+</main>
 <footer class="bg-light py-5">
 	<div class="container">
 		<div class="row">
@@ -18,20 +18,20 @@
 			if (get_field('title_page', 'option')):
 				?>
 				<div class="col-12">
-					<h3>
+					<h3 class="mb-3 mb-lg-0">
 						<?php echo get_field('title_page', 'option'); ?>
 					</h3>
 				</div>
 			<?php endif; ?>
 
-			<div class="col-lg-4">
+			<div class="col-lg-4 mb-4 mb-lg-0">
 				<div class="header__logo">
 					<?php $logo_url = get_template_directory_uri() . '/assets/images/logo.png'; ?>
 					<img src="<?php echo $logo_url; ?>" alt="logo">
 				</div>
 			</div>
 
-			<div class="col-lg-4">
+			<div class="col-lg-4 mb-4 mb-lg-0">
 				<div class="editor">
 					<?php echo get_field('contact_us', 'option'); ?>
 				</div>

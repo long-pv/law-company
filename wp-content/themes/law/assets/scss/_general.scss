@@ -76,3 +76,50 @@
 .card {
     text-decoration: none !important;
 }
+
+// modal dialog
+.modal {
+    z-index: 9999999999;
+
+    .editor {
+        color: #333333 !important;
+
+        * {
+            color: #333333 !important;
+        }
+
+        a {
+            text-decoration: underline !important;
+        }
+    }
+}
+
+.modal-dialog {
+    @include media-breakpoint-up(lg) {
+        width: 70% !important;
+        max-width: 760px !important;
+    }
+
+    .modal-content {
+        border-radius: 0px !important;
+    }
+
+    .modal-body {
+        @include media-breakpoint-up(lg) {
+            padding: 24px;
+        }
+    }
+
+    .modal-header {
+        border: none !important;
+    }
+
+    .close {
+        outline: none !important;
+        border: none !important;
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        z-index: 500;
+    }
+}

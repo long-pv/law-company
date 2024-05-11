@@ -1,0 +1,73 @@
+.contactUs {
+    &__form {
+        @include media-breakpoint-up(lg) {
+            padding: 0px 32px;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus {
+            -webkit-text-fill-color: #ffffff;
+            -webkit-box-shadow: 0 0 0px 40rem #32469F inset;
+        }
+    }
+
+    &__formGroup {
+        margin-bottom: 16px;
+
+        br {
+            display: none !important;
+        }
+
+        input,
+        textarea,
+        select {
+            height: 48px;
+            border: none;
+            outline: none;
+            width: 100%;
+            background-color: #fff;
+            padding: 12px 16px;
+            color: #333333;
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid #848d92;
+            border-radius: 4px;
+            max-height: 120px;
+
+            &::placeholder {
+                color: #848d92;
+            }
+
+            option {
+                color: #1623AF;
+            }
+        }
+    }
+
+    &__formLabel,
+    label {
+        color: #333333;
+        margin-bottom: 4px;
+        display: block;
+        font-weight: 700;
+    }
+
+    &__formSubmit {
+        margin-top: 18px;
+
+        @include media-breakpoint-up(lg) {
+            text-align: center;
+        }
+    }
+
+    &__row {
+        margin-right: -12px;
+        margin-left: -12px;
+
+        &>div {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+}

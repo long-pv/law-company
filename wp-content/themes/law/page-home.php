@@ -50,7 +50,10 @@ if ($introduce_title && $introduce_image):
 
 					<!-- contact us -->
 					<div class="align-items-center mb-5 mm" data-aos="fade-up" data-aos-delay="200">
-						<a href="#" class="btn btn-outline-white-reverse">Contact us</a>
+						<a href="javascript:void(0);" data-toggle="modal" data-target="#contactForm"
+							class="btn btn-outline-white-reverse">
+							Liên hệ
+						</a>
 					</div>
 				</div>
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
@@ -239,7 +242,10 @@ if ($register_title):
 					<?php endif; ?>
 				</div>
 				<div class="col-lg-5 text-center text-lg-end" data-aos="fade-up" data-aos-delay="100">
-					<a href="#" class="btn btn-outline-white-reverse">Contact us</a>
+					<a href="javascript:void(0);" data-toggle="modal" data-target="#contactForm"
+						class="btn btn-outline-white-reverse">
+						Liên hệ
+					</a>
 				</div>
 			</div>
 		</div>
@@ -312,6 +318,67 @@ if ($query_news->have_posts()):
 		</div>
 	</div>
 <?php endif; ?>
+
+<div class="modal fade contactForm" id="contactForm" tabindex="-1" aria-labelledby="exampleModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18.9996 18.9996L5 5" stroke="#161519" stroke-width="2" stroke-miterlimit="10"
+							stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M19 5L5.00041 18.9996" stroke="#161519" stroke-width="2" stroke-miterlimit="10"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</span>
+			</button>
+			<div class="modal-body">
+				<h2 class="heading fw-bold text-primary text-center mb-4">
+					<?php _e('Liên hệ', 'law'); ?>
+				</h2>
+
+				<?php
+				if (get_field('contact_form', 'option')) {
+					$id_form = get_field('contact_form', 'option');
+					echo do_shortcode("[contact-form-7 id=\"$id_form\" html_class=\"contactUs__form\"]");
+				}
+				?>
+				<!-- <form action="" class="contactUs__form">
+<div class="row contactUs__row">
+<div class="col-12">
+<div class="contactUs__formGroup  ">
+<label class="contactUs__formLabel" for="">Họ và tên</label>
+<input type="text" placeholder="Họ và tên">
+</div>
+</div>
+<div class="col-12">
+<div class="contactUs__formGroup  ">
+<label class="contactUs__formLabel" for="">Số điện thoại</label>
+<input type="text" placeholder="Số điện thoại">
+</div>
+</div>
+<div class="col-12">
+<div class="contactUs__formGroup  ">
+<label class="contactUs__formLabel" for="">Email</label>
+<input type="text" placeholder="Email">
+</div>
+</div>
+<div class="col-12">
+<div class="contactUs__formGroup  ">
+<label class="contactUs__formLabel" for="">Nội dung yêu cầu tư vấn</label>
+<textarea placeholder="Nội dung yêu cầu tư vấn"></textarea>
+</div>
+</div>
+</div>
+<div class="contactUs__formSubmit">
+<input class="btn btn-outline-primary py-2 px-3" type="submit" value="Gửi thông tin">
+</div>
+</form> -->
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php
 get_footer();
