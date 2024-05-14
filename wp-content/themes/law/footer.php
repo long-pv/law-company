@@ -26,7 +26,7 @@
 
 			<div class="col-lg-4 mb-4 mb-lg-0">
 				<div class="header__logo">
-					<?php $logo_url = get_template_directory_uri() . '/assets/images/logo.png'; ?>
+					<?php $logo_url = get_template_directory_uri() . '/assets/images/logo_1.png'; ?>
 					<img src="<?php echo $logo_url; ?>" alt="logo">
 				</div>
 			</div>
